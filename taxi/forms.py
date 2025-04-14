@@ -1,6 +1,7 @@
 from django import forms
 from taxi.models import Driver, Car
 import re
+from django.contrib.auth.forms import UserCreationForm
 
 
 class DriverLicenseUpdateForm(forms.ModelForm):
@@ -25,3 +26,9 @@ class CarForm(forms.ModelForm):
         widgets = {
             "drivers": forms.CheckboxSelectMultiple()
         }
+
+
+class DriverUserCreationForm(UserCreationForm):
+    class Meta:
+        model = Driver
+        fields = ['username', 'first_name', 'last_name', 'email', 'license_number']
