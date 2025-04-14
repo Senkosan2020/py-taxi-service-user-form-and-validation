@@ -31,4 +31,4 @@ class CarForm(forms.ModelForm):
 class DriverUserCreationForm(UserCreationForm):
     class Meta:
         model = Driver
-        fields = ['username', 'first_name', 'last_name', 'email', 'license_number']
+        fields = ["username", "first_name", "last_name", "email", "license_number"]
