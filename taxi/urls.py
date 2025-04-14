@@ -48,7 +48,9 @@ urlpatterns = [
     path("cars/<int:pk>/delete/", CarDeleteView.as_view(), name="car-delete"),
     path("drivers/", DriverListView.as_view(), name="driver-list"),
     path(
-        "drivers/<int:pk>/", DriverDetailView.as_view(), name="driver-detail"
+        "drivers/<int:pk>/",
+        DriverDetailView.as_view(),
+        name="driver-detail"
     ),
 
     path(
@@ -66,11 +68,7 @@ urlpatterns = [
         DriverLicenseUpdateView.as_view(),
         name="driver-update"
     ),
-    path(
-        "cars/<int:pk>/toggle-assign/",
-        toggle_assign_to_car,
-        name="toggle-assign-to-car"
-    ),
+    path("cars/<int:pk>/toggle-assign/", toggle_assign_to_car, name="toggle-assign-to-car")
 ]
 
 app_name = "taxi"
