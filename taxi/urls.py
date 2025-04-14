@@ -68,7 +68,11 @@ urlpatterns = [
         DriverLicenseUpdateView.as_view(),
         name="driver-update"
     ),
-    path("cars/<int:pk>/toggle-assign/", toggle_assign_to_car, name="toggle-assign-to-car")
+    path(
+        "cars/<int:pk>/toggle-assign/",
+        toggle_assign_to_car,
+        name="toggle-assign-to-car"
+    )
 ]
 
 app_name = "taxi"
